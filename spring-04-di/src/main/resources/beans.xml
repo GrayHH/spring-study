@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.hui.pojo.Address"/>
+
+     <bean id="student" class="com.hui.pojo.Student">
+         <property name="name" value="灰灰"/>
+         <property name="address" ref="address"/>
+
+         <property name="books">
+             <array>
+                 <value>红楼梦</value>
+                 <value>西游记</value>
+                 <value>小黄书</value>
+             </array>
+         </property>
+
+         <property name="hobbies">
+             <list>
+                 <value>洗刷刷</value>
+                 <value>洗刷刷</value>
+                 <value>洗刷刷</value>
+                 <value>洗刷刷</value>
+             </list>
+         </property>
+
+         <property name="card">
+             <map>
+                 <entry key="身份证" value="11122"/>
+                 <entry key="银行卡" value="11122"/>
+             </map>
+         </property>
+
+         <property name="games">
+             <set>
+                 <value>CSGO</value>
+                 <value>CSGO</value>
+                 <value>CSGO</value>
+             </set>
+         </property>
+
+         <property name="wife">
+             <null/>
+         </property>
+
+         <property name="info">
+             <props>
+                 <prop key="driver">XXX</prop>
+                 <prop key="url">XX</prop>
+                 <prop key="username">XXX</prop>
+             </props>
+         </property>
+     </bean>
+</beans>
